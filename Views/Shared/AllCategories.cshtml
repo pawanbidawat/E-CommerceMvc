@@ -1,0 +1,45 @@
+﻿@model List<Categories>
+
+<h1> All Category Names</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            AllCategories
+            <th scope="col">Category Name</th>
+            <th scope="col">Action Method</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryName </td>
+                <td>
+                    <a class="btn btn-primary" asp-route-id="@item.CategoryId" role="button" asp-controller="Shared" asp-action="Edit">Edit</a>
+                    <button type="button" cat-id="@item.CategoryId" class="btn btn-secondary delete">Delete</button>
+                    <a class="btn btn-primary" id="@item.CategoryId" asp-route-id="@item.CategoryId" role="button" asp-controller="Shared" asp-action="GetSubCategory">SubCategory</a>
+                   @*  @foreach (var sub in item.SubCategoryList)
+                    {
+
+                        <a class="btn btn-primary" asp-route-id="@sub.SubCategoryId" role="button" asp-controller="Shared" asp-action="EditSubCategory">Edit SubCategory Name</a>
+
+
+                    } *@
+
+
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/index.js"></script>
+
+

@@ -1,0 +1,29 @@
+﻿@using Newtonsoft.Json
+@{
+    // Assuming HttpClient is injected into the page model or controller
+    var Client = new HttpClient();
+    var apiUrl = "https://localhost:44373/api/Product/GetAllProduct";
+    var response = await Client.GetAsync(apiUrl);
+    var data = await response.Content.ReadAsStringAsync();
+    var productsWrapper = JsonConvert.DeserializeObject<PagedProductData>(data);
+    var products = productsWrapper.PagedData;
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/index.css" />
+</head>
+<h1>Home Index View</h1>
+
+<div id="Products">
+    @foreach (var product in products)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="/images/@product.ProductImage" alt="Not Found" class="card-img-top productImage" productid="@product.ProductId">
+            <h4 class="card-title">@product.ProductPrice Rs</h4>
+            <div class="card-body">
+                <h5 class="card-title">@product.ProductName</h5>
+                <p class="card-text">@product.ProductDescription</p>
+            </div>
+        </div>
+    }
+</div>

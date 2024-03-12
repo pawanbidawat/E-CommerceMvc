@@ -1,0 +1,29 @@
+﻿<form >
+    <div class="form-group">
+        <label for="categoryName">Category Name</label>
+         <input type="text" class="form-control cat_field" placeholder="Enter Category Name">        
+    </div>
+    <input type="submit" class="btn btn-primary save_category" >
+</form>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    $(".save_category").click(function () {
+        debugger;
+
+        var catname = $(".cat_field").val();
+        
+
+        $.ajax({
+            
+            type: "POST",
+            url: `https://localhost:44373/api/Category/AddCategory?category=${catname}`,
+
+            success: function (response) {
+                window.location.href = "/Home/Index"
+            },
+            error: function (xhr, textStatus, errorThrown) {
+
+            }
+        })
+    })
+</script>

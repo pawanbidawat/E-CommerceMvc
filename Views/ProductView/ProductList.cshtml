@@ -1,0 +1,19 @@
+﻿@model List<Product>
+
+@{
+    foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.ProductPrice Rs</td>
+            <td>@item.ProductDescription</td>
+            <td>
+                <img src="~/images/@item.ProductImage" alt="Not Found" style="width:200px" />
+            </td>
+            <td><a class="btn btn-warning" asp-controller="ProductView" asp-action="EditProduct" asp-route-id="@item.ProductId">Edit</a></td>
+            <td><a class="btn btn-danger " asp-controller="ProductView" asp-action="DeleteProduct" asp-route-id="@item.ProductId">Delete</a></td>
+
+        </tr>
+    }
+}
+

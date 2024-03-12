@@ -1,0 +1,119 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TemporalBox
+build_property.RootNamespace = TemporalBox
+build_property.ProjectDir = C:\Users\s3\OneDrive\Desktop\MVC_Projects\MVC_Projects\TemporalBoxMvc\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\s3\OneDrive\Desktop\MVC_Projects\MVC_Projects\TemporalBoxMvc
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Cart/CartIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Home/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/ProductView/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcQWRkUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/ProductView/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcRWRpdFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/ProductView/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcUHJvZHVjdERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/ProductView/ProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcUHJvZHVjdExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/ProductView/ShowProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcU2hvd1Byb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/ProductView/_ProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcX1Byb2R1Y3RMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkZENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/AllCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFsbENhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/Category.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/EditSubCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRTdWJDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/GetSubCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdldFN1YkNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s3/OneDrive/Desktop/MVC_Projects/MVC_Projects/TemporalBoxMvc/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mbhweexri6

@@ -1,0 +1,39 @@
+﻿@model List<Categories>
+
+
+<form method="post" id="EditCategory">
+    @if (Model != null){
+    <div class="form-group">
+        <label for="categoryName">Category Name</label>
+        <input type="text" id="@Model[0].CategoryId" class="form-control input" name="@Model[0].CategoryName" value="@Model[0].CategoryName" />
+    </div>
+    }
+    <button type="submit" class="btn btn-primary updateCategory">Submit</button>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    $(".updateCategory").click(function () {
+        debugger;
+
+        var catId = $(".input").attr("id");
+        var categoryName = $(".input").val();
+        console.log(categoryName);
+        $.ajax({
+            type: "PUT",
+            url: `https://localhost:44373/api/Category/UpdateCategory?Id=${catId}&CategoryName=${categoryName}`,
+
+
+            success: function (response) {
+                window.location.href = "/Shared/AllCategories";
+
+            },
+            error: function (xhr, textStatus, errorThrown) {
+
+            }
+        })
+    })
+</script>

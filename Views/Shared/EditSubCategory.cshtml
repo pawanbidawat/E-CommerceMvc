@@ -1,0 +1,49 @@
+﻿@model List<SubCategory>
+
+<h1>This is sub Category</h1>
+@if (Model != null && Model.Count > 0)
+{
+    <form method="post">
+     
+            <div class="form-group">
+                <label asp-for="@Model[0].SubCategoryName">SubCategory Name</label>
+                <input asp-for="@Model[0].SubCategoryName" class="SubCat" subId="@Model[0].SubCategoryId" value="@Model[0].SubCategoryName" />
+                <input type="hidden" asp-for="@Model[0].SubCategoryId" />
+            </div>
+        
+        <button type="submit" class="btn btn-primary EditSub">Submit</button>
+    </form>
+}
+else
+{
+    <p>No data available</p>
+}
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+
+        $(".EditSub").click(function () {
+            var subCatId = $(".subCat").attr("subId");
+            var subCatName = $(".subCat").val();
+            console.log(subCatId);
+            console.log(subCatName);
+            debugger;
+            $.ajax({
+                type: "PUT",
+                url: `https://localhost:44373/api/Category/UpdateSubCategory?Id=${subCatId}&SubCategoryName=${subCatName}`,
+                success: function (result) {
+                    console.log("SubCatEditted");
+                    window.location.href = "/Shared/EditSubCategory"
+                },
+                error: function (result) {
+                    console.log(result);
+                }
+
+            });
+        });
+    });
+</script>

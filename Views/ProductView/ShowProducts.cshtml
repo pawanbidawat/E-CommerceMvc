@@ -1,0 +1,58 @@
+﻿@model PagedProductData
+
+@{
+    var pagingData = Model.PagedData;
+    var currentPage = GlobalVariable.CurrentPage;
+    var pageCount = GlobalVariable.PageCount;
+
+}
+@*  <input type="hidden" id="currentPage" value="@GlobalVariable.CurrentPage" />
+<input type="hidden" id="pageCount" value="@GlobalVariable.PageCount" />  *@
+
+<div class="input-group" style="padding-top:1%">
+    <input type="search" class="form-control rounded" placeholder="Search" name="Search" aria-label="Search" aria-describedby="search-addon" />
+    <button type="button" id="searchBox" value="Search" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
+</div>
+
+<select id="rangeSelect" class="form-select form-select-sm" aria-label=".form-select-sm example">
+    <option selected>Select Range</option>
+    <option value="1" data-min="100" data-max="1000">100-1000</option>
+    <option value="2" data-min="1000" data-max="5000">1000-5000</option>
+    <option value="3" data-min="5000" data-max="10000">5000-10,000</option>
+</select>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Description</th>
+            <th>Product Image</th>
+        </tr>
+    </thead>
+    @* showing product list *@
+    <tbody id="ProductList">
+        @Html.Partial("_ProductList", Model)
+
+    </tbody>
+
+</table>
+
+<div id="pagination">
+    @for (var i = 1; i <= pageCount; i++)
+    {
+        <a href="#" page="@i" class="page-link badge rounded-pill bg-light  @(i == currentPage ? "active" : "")">@i</a>
+    }
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script src="~/js/ShowProduct.js"></script>
+<script>
+ 
+       
+    
+     
+</script>
+

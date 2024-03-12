@@ -1,0 +1,101 @@
+﻿@using Newtonsoft.Json
+@using System.Net.Http.Headers
+@{
+
+
+    var Client = new HttpClient();
+    var apiUrl = "https://localhost:44373/api/Category/GetAllCategory";
+    var token = GlobalVariable.Token;
+    Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+    var response = await Client.GetAsync(apiUrl);
+    var data = JsonConvert.DeserializeObject<List<Categories>>(await response.Content.ReadAsStringAsync());
+
+}
+
+<form method="post" id="AddForm">
+    <div class="form-group">
+        <label for="categoryName">Category Name</label>
+        @* <input type="text" class="form-control" name="categoryName" placeholder="Enter Category Name"> *@
+        <select class=" form-control cat_list">
+            @{
+                foreach (var item in data)
+                {
+                        <option class="cat_id" id="@item.CategoryId" value="@item.CategoryId">@item.CategoryName</option>
+                }
+            }
+
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="subCategoryName">Subcategory Name</label>
+        <input type="text" id="subCategory" class="form-control subCategory" name="subCategoryName" placeholder="Enter Subcategory Name">
+    </div>
+    <button type="submit" class="btn btn-primary save_subcategory">Submit</button>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    $(".save_subcategory").click(function () {
+        debugger;
+      
+        var catId = $(".cat_list").find(":selected").val();
+        var subcategoryName = $(".subCategory").val();
+
+        $.ajax({
+            type: "POST",
+            url: `https://localhost:44373/api/Category/AddSubcategory?categoryId=${catId}&subCategoryName=${subcategoryName}`,
+            
+            
+            success: function (response) {
+                window.location.href = "/Shared/Add"
+      
+
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                
+            }
+        })
+    })
+</script>
+
+
+@* <script>
+    $(document).ready(function () {
+        $("#AddForm").submit(function (event) {
+            event.preventDefault();
+            var formData = {
+                categoryName: $("input[name='categoryName']").val(),
+                subCategoryList: [
+                    {
+                        subCategoryName: $("input[name= 'subCategoryName']").val()
+                    }
+                ]
+            }
+            console.log(formData);
+         
+            $.ajax({
+                type: "POST",
+                url: "https://localhost:44373/api/Category/AddCategory",
+                data: JSON.stringify(formData),
+                contentType: "application/json",
+                success: function (response) {
+                    if (response) {
+                        window.location.href = "/Shared/Add";
+                        alert("Added Successfully");
+                    }
+
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    console.log(xhr.responseText);
+                }
+
+            });
+        });
+    });
+
+
+
+</script> *@

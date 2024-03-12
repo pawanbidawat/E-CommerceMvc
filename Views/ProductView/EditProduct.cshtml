@@ -1,0 +1,104 @@
+﻿@model Product
+
+@using Newtonsoft.Json
+@using System.Net.Http.Headers
+@{
+
+
+    var Client = new HttpClient();
+    var apiUrl = "https://localhost:44373/api/Category/GetAllCategory";
+    var token = GlobalVariable.Token;
+    Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+    var response = await Client.GetAsync(apiUrl);
+    var data = JsonConvert.DeserializeObject<List<Categories>>(await response.Content.ReadAsStringAsync());
+    ViewData["Categories"] = data;
+
+}
+<h1>This is product edit page</h1>
+<div>
+
+    <form method="post" action="@Url.Action("UpdateProduct" ,"ProductView")" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label asp-for="CategoryId">Category Name</label>
+            <select class="form-control" id="categorySelect" name="CategoryName">
+                <option value="">Select Category</option>
+                @foreach (var item in data)
+                {
+                    <option class="" id="@item.CategoryId" value="@item.CategoryId">@item.CategoryName</option>
+                }
+            </select>
+            <input asp-for="CategoryId" type="hidden" class="hiddenId" />
+        </div>
+        <div class="form-group">
+            <label asp-for="SubCategoryId">Sub Category Name</label>
+            <select class="form-control" id="subCategorySelect" name="SubCategoryName">
+                <option value="">Select Sub Category</option>
+            </select>
+            <input asp-for="SubCategoryId" type="hidden" class="hiddenSubId" />
+        </div>
+
+        <div>
+            <input asp-for="ProductId" type="hidden" />
+        </div>
+        <div class="form-group">
+            <label asp-for="ProductName">ProductName</label>
+            <input asp-for="ProductName" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ProductPrice">Price</label>
+            <input asp-for="ProductPrice" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ProductDescription">Description</label>
+            <input asp-for="ProductDescription" class="form-control" />
+        </div>
+        <div>
+            <input asp-for="ProductImage" type="hidden" />
+        </div>
+        <div class="form-group">
+            <img src="~/images/@Model.ProductImage" alt="Not Found" style="width:200px" />
+            <label asp-for="ProductImageFile">&nbsp;</label>
+            <input asp-for="ProductImageFile" class="form-control" />
+        </div>
+        <input type="submit" value="Submit" class="form-control" />
+    </form>
+</div> 
+
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#categorySelect").change(function () {
+            var selectedCatId = $(this).val();
+            $(".hiddenId").val(selectedCatId);
+
+            var subCatSelect = $("#subCategorySelect");
+            subCatSelect.empty();
+
+            if (selectedCatId) {
+                $.ajax({
+                    method: 'GET',
+                    url: `https://localhost:44373/api/Category/GetSubCategory?id=${selectedCatId}`,
+
+                    success: function (data) {
+                        subCatSelect.append('<option value="">Select Sub Category</option>');
+                        data.forEach(subcategory => {
+                            subCatSelect.append(`<option value="${subcategory.subCategoryId}">${subcategory.subCategoryName}</option>`);
+                        });
+                    },
+                    error: function (error) {
+                        console.error('Failed ', error);
+                    }
+                });
+            } else {
+                console.log("error");
+            }
+        });
+   
+    });
+</script>

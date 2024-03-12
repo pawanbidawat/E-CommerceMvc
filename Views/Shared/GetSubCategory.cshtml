@@ -1,0 +1,55 @@
+﻿
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Subcategory</th>            
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in ViewBag.SubcategoryList)
+            {
+                <tr>
+                    <td>@item.SubCategoryName</td>
+                   
+                
+                    <td><a class="btn btn-warning"  asp-controller="Shared" asp-action="EditSubCategory" asp-route-id="@item.SubCategoryId">Edit</a></td>
+                    <td><button type"button" sub-cat-id="@item.SubCategoryId" class="btn btn-danger subDelete">Delete</button></td>
+                </tr>
+            }
+        }
+        
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/index.js" ></script>
+<script>
+
+    $(".subDelete").click(function () {
+        debugger;
+        var categoryId = $(this).attr('sub-cat-id');
+
+        console.log(categoryId)
+
+
+        debugger;
+        $.ajax({
+            type: "DELETE",
+            url: `https://localhost:44373/api/Category/DeleteSubCategory?id=${categoryId}`,
+
+
+            success: function (response) {
+                if (response) {
+                    window.location.href = "/Shared/AllCategories";
+
+                }
+
+            },
+            error: function (response) {
+
+            }
+        })
+    })
+
+</script>
